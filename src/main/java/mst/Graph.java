@@ -1,51 +1,61 @@
 package mst;
 
-import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
-import java.io.*;
-import java.lang.reflect.Type;
 import java.util.*;
 
 public class Graph {
-    public final int n;
-    public final List<Edge> edges;
+    private final List<String> vertices;    // ordered list of vertex ids
+    private final List<Edge> edges;
+    private final Map<String, List<Edge>> adj;
 
-    public Graph(int n, List<Edge> edges) {
-        this.n = n;
-        this.edges = edges;
-    }
-
-    public static List<Graph> loadFromFile(String path) throws IOException {
-        Gson gson = new Gson();
-        Reader r = new FileReader(path);
-        Type listType = new TypeToken<List<JsonObject>>(){}.getType();
-        List<JsonObject> arr = gson.fromJson(r, listType);
-        List<Graph> result = new ArrayList<>();
-        for (JsonObject jo : arr) {
-            int n = jo.get("n").getAsInt();
-            JsonArray eArr = jo.getAsJsonArray("edges");
-            List<Edge> edges = new ArrayList<>();
-            for (JsonElement e : eArr) {
-                JsonObject o = e.getAsJsonObject();
-                edges.add(new Edge(
-                        o.get("u").getAsInt(),
-                        o.get("v").getAsInt(),
-                        o.get("w").getAsDouble()
-                ));
-            }
-            result.add(new Graph(n, edges));
-        }
-        r.close();
-        return result;
-    }
-
-    public List<List<Edge>> adjacencyList() {
-        List<List<Edge>> adj = new ArrayList<>();
-        for (int i = 0; i < n; i++) adj.add(new ArrayList<>());
+    public Graph(List<String> vertices, List<Edge> edges) {
+        this.vertices = new ArrayList<>(vertices);
+        this.edges = new ArrayList<>(edges);
+        this.adj = new HashMap<>();
+        for (String v : vertices) adj.put(v, new ArrayList<>());
         for (Edge e : edges) {
-            adj.get(e.u).add(e);
-            adj.get(e.v).add(e);
+            // ensure vertices exist
+            if (!adj.containsKey(e.getU()) || !adj.containsKey(e.getV())) {
+                throw new IllegalArgumentException("Edge uses vertex not in vertices list: " + e);
+            }
+            adj.get(e.getU()).add(e);
+            adj.get(e.getV()).add(e);
         }
-        return adj;
+    }
+
+    public List<String> getVertices() { return Collections.unmodifiableList(vertices); }
+    public List<Edge> getEdges() { return Collections.unmodifiableList(edges); }
+    public List<Edge> adj(String v) {
+        List<Edge> list = adj.get(v);
+        return list == null ? Collections.emptyList() : Collections.unmodifiableList(list);
+    }
+
+    public int V() { return vertices.size(); }
+    public int E() { return edges.size(); }
+
+    public boolean isConnected() {
+        if (vertices.isEmpty()) return true;
+        Set<String> visited = new HashSet<>();
+        Deque<String> stack = new ArrayDeque<>();
+        stack.push(vertices.get(0));
+        while (!stack.isEmpty()) {
+            String cur = stack.pop();
+            if (!visited.add(cur)) continue;
+            for (Edge e : adj(cur)) {
+                String w = e.other(cur);
+                if (!visited.contains(w)) stack.push(w);
+            }
+        }
+        return visited.size() == vertices.size();
+    }
+
+    public boolean hasCycle() {
+        // union-find cycle detection (undirected)
+        UnionFind uf = new UnionFind(vertices);
+        for (Edge e : edges) {
+            String u = e.getU(), v = e.getV();
+            if (uf.find(u).equals(uf.find(v))) return true;
+            uf.union(u, v);
+        }
+        return false;
     }
 }
