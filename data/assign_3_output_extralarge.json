@@ -5093,7 +5093,7 @@
           "heap_pops": 15412,
           "edge_examinations": 30806
         },
-        "time_ms": 16.304708,
+        "time_ms": "16.546ms",
         "valid": true
       },
       "kruskal": {
@@ -10185,7 +10185,7 @@
           "edge_considered": 3804,
           "find_calls": 16799
         },
-        "time_ms": 9.20625,
+        "time_ms": "9.730ms",
         "valid": true
       }
     },
@@ -20057,7 +20057,7 @@
           "heap_pops": 58362,
           "edge_examinations": 116661
         },
-        "time_ms": 29.223292,
+        "time_ms": "28.332ms",
         "valid": true
       },
       "kruskal": {
@@ -29924,7 +29924,7 @@
           "edge_considered": 6170,
           "find_calls": 27625
         },
-        "time_ms": 12.145125,
+        "time_ms": "12.229ms",
         "valid": true
       }
     },
@@ -35481,7 +35481,7 @@
           "heap_pops": 18503,
           "edge_examinations": 36977
         },
-        "time_ms": 6.894459,
+        "time_ms": "6.918ms",
         "valid": true
       },
       "kruskal": {
@@ -41033,7 +41033,7 @@
           "edge_considered": 4054,
           "find_calls": 17940
         },
-        "time_ms": 14.246625,
+        "time_ms": "15.415ms",
         "valid": true
       }
     }

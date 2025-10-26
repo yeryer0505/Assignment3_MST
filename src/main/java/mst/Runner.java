@@ -95,7 +95,7 @@ public class Runner {
                     && !new Graph(graph.getVertices(), krRes.mstEdges).hasCycle();
 
             JsonObject datasetOut = new JsonObject();
-            datasetOut.addProperty("name", name);
+            datasetOut.addProperty("id", name);
             datasetOut.addProperty("V", graph.V());
             datasetOut.addProperty("E", graph.E());
 
@@ -103,14 +103,14 @@ public class Runner {
             primObj.add("mst_edges", edgesToJson(primRes.mstEdges));
             primObj.addProperty("total_cost", primRes.totalCost);
             primObj.add("ops", mapLongToJson(primRes.ops));
-            primObj.addProperty("time_ms", primRes.timeMs);
+            primObj.addProperty("time_ms", String.format(Locale.ROOT, "%.3fms", primRes.timeMs));
             primObj.addProperty("valid", primValid);
 
             JsonObject krObj = new JsonObject();
             krObj.add("mst_edges", edgesToJson(krRes.mstEdges));
             krObj.addProperty("total_cost", krRes.totalCost);
             krObj.add("ops", mapLongToJson(krRes.ops));
-            krObj.addProperty("time_ms", krRes.timeMs);
+            krObj.addProperty("time_ms", String.format(Locale.ROOT, "%.3fms", krRes.timeMs));
             krObj.addProperty("valid", krValid);
 
             datasetOut.add("prim", primObj);
@@ -123,8 +123,8 @@ public class Runner {
                     String.valueOf(graph.E()),
                     String.valueOf(primRes.totalCost),
                     String.valueOf(krRes.totalCost),
-                    String.format(Locale.ROOT, "%.3f", primRes.timeMs),
-                    String.format(Locale.ROOT, "%.3f", krRes.timeMs),
+                    String.format(Locale.ROOT, "%.3fms", primRes.timeMs),
+                    String.format(Locale.ROOT, "%.3fms", krRes.timeMs),
                     GSON.toJson(primRes.ops),
                     GSON.toJson(krRes.ops)
             });

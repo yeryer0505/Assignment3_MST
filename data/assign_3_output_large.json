@@ -3223,7 +3223,7 @@
           "heap_pops": 10265,
           "edge_examinations": 20493
         },
-        "time_ms": 4.15375,
+        "time_ms": "4.739ms",
         "valid": true
       },
       "kruskal": {
@@ -6445,7 +6445,7 @@
           "edge_considered": 1999,
           "find_calls": 8937
         },
-        "time_ms": 2.440084,
+        "time_ms": "2.453ms",
         "valid": true
       }
     },
@@ -10117,7 +10117,7 @@
           "heap_pops": 13309,
           "edge_examinations": 26593
         },
-        "time_ms": 5.040792,
+        "time_ms": "15.428ms",
         "valid": true
       },
       "kruskal": {
@@ -13784,7 +13784,7 @@
           "edge_considered": 2561,
           "find_calls": 11461
         },
-        "time_ms": 3.109041,
+        "time_ms": "3.277ms",
         "valid": true
       }
     },
@@ -15341,7 +15341,7 @@
           "heap_pops": 2292,
           "edge_examinations": 4568
         },
-        "time_ms": 0.708417,
+        "time_ms": "0.723ms",
         "valid": true
       },
       "kruskal": {
@@ -16893,7 +16893,7 @@
           "edge_considered": 721,
           "find_calls": 3319
         },
-        "time_ms": 0.642625,
+        "time_ms": "0.620ms",
         "valid": true
       }
     },
@@ -20680,7 +20680,7 @@
           "heap_pops": 14224,
           "edge_examinations": 28406
         },
-        "time_ms": 5.261833,
+        "time_ms": "5.061ms",
         "valid": true
       },
       "kruskal": {
@@ -24462,7 +24462,7 @@
           "edge_considered": 2376,
           "find_calls": 10660
         },
-        "time_ms": 2.881167,
+        "time_ms": "3.246ms",
         "valid": true
       }
     },
@@ -25979,7 +25979,7 @@
           "heap_pops": 2214,
           "edge_examinations": 4410
         },
-        "time_ms": 0.684125,
+        "time_ms": "0.703ms",
         "valid": true
       },
       "kruskal": {
@@ -27491,7 +27491,7 @@
           "edge_considered": 907,
           "find_calls": 4059
         },
-        "time_ms": 0.596334,
+        "time_ms": "0.669ms",
         "valid": true
       }
     },
@@ -31453,7 +31453,7 @@
           "heap_pops": 15647,
           "edge_examinations": 31259
         },
-        "time_ms": 5.362666,
+        "time_ms": "5.072ms",
         "valid": true
       },
       "kruskal": {
@@ -35410,7 +35410,7 @@
           "edge_considered": 2251,
           "find_calls": 10170
         },
-        "time_ms": 2.897709,
+        "time_ms": "3.359ms",
         "valid": true
       }
     },
@@ -38512,7 +38512,7 @@
           "heap_pops": 9603,
           "edge_examinations": 19174
         },
-        "time_ms": 3.063542,
+        "time_ms": "3.122ms",
         "valid": true
       },
       "kruskal": {
@@ -41609,7 +41609,7 @@
           "edge_considered": 2495,
           "find_calls": 10871
         },
-        "time_ms": 1.920291,
+        "time_ms": "2.309ms",
         "valid": true
       }
     },
@@ -44391,7 +44391,7 @@
           "heap_pops": 7718,
           "edge_examinations": 15403
         },
-        "time_ms": 2.506084,
+        "time_ms": "2.569ms",
         "valid": true
       },
       "kruskal": {
@@ -47168,7 +47168,7 @@
           "edge_considered": 1667,
           "find_calls": 7434
         },
-        "time_ms": 1.490333,
+        "time_ms": "1.792ms",
         "valid": true
       }
     },
@@ -49490,7 +49490,7 @@
           "heap_pops": 5329,
           "edge_examinations": 10632
         },
-        "time_ms": 1.632625,
+        "time_ms": "1.678ms",
         "valid": true
       },
       "kruskal": {
@@ -51807,7 +51807,7 @@
           "edge_considered": 1264,
           "find_calls": 5817
         },
-        "time_ms": 1.07525,
+        "time_ms": "1.312ms",
         "valid": true
       }
     },
@@ -54859,7 +54859,7 @@
           "heap_pops": 9338,
           "edge_examinations": 18643
         },
-        "time_ms": 2.936166,
+        "time_ms": "3.071ms",
         "valid": true
       },
       "kruskal": {
@@ -57906,7 +57906,7 @@
           "edge_considered": 1912,
           "find_calls": 8501
         },
-        "time_ms": 1.817458,
+        "time_ms": "2.192ms",
         "valid": true
       }
     }
