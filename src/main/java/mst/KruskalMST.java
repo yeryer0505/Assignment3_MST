@@ -6,7 +6,7 @@ public class KruskalMST {
     public static class Result {
         public final List<Edge> mstEdges;
         public final double totalCost;
-        public final Map<String, Long> ops; // e.g., edge_considered, find_calls, unions
+        public final Map<String, Long> ops;
         public final double timeMs;
 
         public Result(List<Edge> mstEdges, double totalCost, Map<String, Long> ops, double timeMs) {
@@ -30,7 +30,6 @@ public class KruskalMST {
             edgeConsidered++;
             String u = e.getU();
             String v = e.getV();
-            // find roots
             String ru = uf.find(u);
             String rv = uf.find(v);
             if (!ru.equals(rv)) {
