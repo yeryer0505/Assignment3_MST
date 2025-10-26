@@ -1,0 +1,91 @@
+name,V,E,prim_cost,kruskal_cost,prim_time_ms,kruskal_time_ms,prim_ops,kr_ops
+graph_1,86,524,461.0,461.0,0.143,0.158,"{
+  ""heap_pushes"": 524,
+  ""heap_pops"": 524,
+  ""edge_examinations"": 1036
+}","{
+  ""unions"": 85,
+  ""edge_considered"": 214,
+  ""find_calls"": 966
+}"
+graph_2,96,714,430.0,430.0,0.187,0.188,"{
+  ""heap_pushes"": 714,
+  ""heap_pops"": 714,
+  ""edge_examinations"": 1413
+}","{
+  ""unions"": 95,
+  ""edge_considered"": 302,
+  ""find_calls"": 1340
+}"
+graph_3,68,347,471.0,471.0,0.094,0.098,"{
+  ""heap_pushes"": 347,
+  ""heap_pops"": 347,
+  ""edge_examinations"": 681
+}","{
+  ""unions"": 67,
+  ""edge_considered"": 152,
+  ""find_calls"": 694
+}"
+graph_4,106,841,430.0,430.0,0.228,0.201,"{
+  ""heap_pushes"": 841,
+  ""heap_pops"": 841,
+  ""edge_examinations"": 1670
+}","{
+  ""unions"": 105,
+  ""edge_considered"": 292,
+  ""find_calls"": 1299
+}"
+graph_5,112,993,504.0,504.0,0.258,0.313,"{
+  ""heap_pushes"": 993,
+  ""heap_pops"": 993,
+  ""edge_examinations"": 1966
+}","{
+  ""unions"": 111,
+  ""edge_considered"": 644,
+  ""find_calls"": 2708
+}"
+graph_6,94,624,440.0,440.0,0.161,0.147,"{
+  ""heap_pushes"": 624,
+  ""heap_pops"": 624,
+  ""edge_examinations"": 1237
+}","{
+  ""unions"": 93,
+  ""edge_considered"": 194,
+  ""find_calls"": 906
+}"
+graph_7,68,340,439.0,439.0,0.087,0.091,"{
+  ""heap_pushes"": 340,
+  ""heap_pops"": 340,
+  ""edge_examinations"": 671
+}","{
+  ""unions"": 67,
+  ""edge_considered"": 122,
+  ""find_calls"": 570
+}"
+graph_8,31,75,317.0,317.0,0.028,0.039,"{
+  ""heap_pushes"": 75,
+  ""heap_pops"": 75,
+  ""edge_examinations"": 144
+}","{
+  ""unions"": 29,
+  ""edge_considered"": 75,
+  ""find_calls"": 328
+}"
+graph_9,57,219,488.0,488.0,0.058,0.080,"{
+  ""heap_pushes"": 219,
+  ""heap_pops"": 219,
+  ""edge_examinations"": 433
+}","{
+  ""unions"": 56,
+  ""edge_considered"": 152,
+  ""find_calls"": 673
+}"
+graph_10,44,133,456.0,456.0,0.037,0.047,"{
+  ""heap_pushes"": 133,
+  ""heap_pops"": 133,
+  ""edge_examinations"": 258
+}","{
+  ""unions"": 43,
+  ""edge_considered"": 68,
+  ""find_calls"": 320
+}"

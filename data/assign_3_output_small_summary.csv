@@ -1,0 +1,46 @@
+name,V,E,prim_cost,kruskal_cost,prim_time_ms,kruskal_time_ms,prim_ops,kr_ops
+graph_1,8,12,91.0,91.0,0.009,0.031,"{
+  ""heap_pushes"": 12,
+  ""heap_pops"": 12,
+  ""edge_examinations"": 20
+}","{
+  ""unions"": 7,
+  ""edge_considered"": 8,
+  ""find_calls"": 33
+}"
+graph_2,14,34,206.0,206.0,0.012,0.032,"{
+  ""heap_pushes"": 34,
+  ""heap_pops"": 34,
+  ""edge_examinations"": 65
+}","{
+  ""unions"": 13,
+  ""edge_considered"": 17,
+  ""find_calls"": 79
+}"
+graph_3,14,37,104.0,104.0,0.011,0.023,"{
+  ""heap_pushes"": 37,
+  ""heap_pops"": 37,
+  ""edge_examinations"": 67
+}","{
+  ""unions"": 13,
+  ""edge_considered"": 16,
+  ""find_calls"": 77
+}"
+graph_4,16,49,132.0,132.0,0.014,0.023,"{
+  ""heap_pushes"": 49,
+  ""heap_pops"": 49,
+  ""edge_examinations"": 91
+}","{
+  ""unions"": 15,
+  ""edge_considered"": 20,
+  ""find_calls"": 93
+}"
+graph_5,7,5,138.0,138.0,0.003,0.008,"{
+  ""heap_pushes"": 5,
+  ""heap_pops"": 5,
+  ""edge_examinations"": 8
+}","{
+  ""unions"": 5,
+  ""edge_considered"": 5,
+  ""find_calls"": 22
+}"

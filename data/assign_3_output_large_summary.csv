@@ -1,0 +1,91 @@
+name,V,E,prim_cost,kruskal_cost,prim_time_ms,kruskal_time_ms,prim_ops,kr_ops
+graph_1,643,10265,1518.0,1518.0,4.154,2.440,"{
+  ""heap_pushes"": 10265,
+  ""heap_pops"": 10265,
+  ""edge_examinations"": 20493
+}","{
+  ""unions"": 642,
+  ""edge_considered"": 1999,
+  ""find_calls"": 8937
+}"
+graph_2,732,13309,1573.0,1573.0,5.041,3.109,"{
+  ""heap_pushes"": 13309,
+  ""heap_pops"": 13309,
+  ""edge_examinations"": 26593
+}","{
+  ""unions"": 731,
+  ""edge_considered"": 2561,
+  ""find_calls"": 11461
+}"
+graph_3,309,2292,1314.0,1314.0,0.708,0.643,"{
+  ""heap_pushes"": 2292,
+  ""heap_pops"": 2292,
+  ""edge_examinations"": 4568
+}","{
+  ""unions"": 308,
+  ""edge_considered"": 721,
+  ""find_calls"": 3319
+}"
+graph_4,755,14224,1601.0,1601.0,5.262,2.881,"{
+  ""heap_pushes"": 14224,
+  ""heap_pops"": 14224,
+  ""edge_examinations"": 28406
+}","{
+  ""unions"": 754,
+  ""edge_considered"": 2376,
+  ""find_calls"": 10660
+}"
+graph_5,301,2214,1465.0,1465.0,0.684,0.596,"{
+  ""heap_pushes"": 2214,
+  ""heap_pops"": 2214,
+  ""edge_examinations"": 4410
+}","{
+  ""unions"": 300,
+  ""edge_considered"": 907,
+  ""find_calls"": 4059
+}"
+graph_6,790,15647,1586.0,1586.0,5.363,2.898,"{
+  ""heap_pushes"": 15647,
+  ""heap_pops"": 15647,
+  ""edge_examinations"": 31259
+}","{
+  ""unions"": 789,
+  ""edge_considered"": 2251,
+  ""find_calls"": 10170
+}"
+graph_7,618,9603,1479.0,1479.0,3.064,1.920,"{
+  ""heap_pushes"": 9603,
+  ""heap_pops"": 9603,
+  ""edge_examinations"": 19174
+}","{
+  ""unions"": 617,
+  ""edge_considered"": 2495,
+  ""find_calls"": 10871
+}"
+graph_8,554,7718,1472.0,1472.0,2.506,1.490,"{
+  ""heap_pushes"": 7718,
+  ""heap_pops"": 7718,
+  ""edge_examinations"": 15403
+}","{
+  ""unions"": 553,
+  ""edge_considered"": 1667,
+  ""find_calls"": 7434
+}"
+graph_9,462,5329,1440.0,1440.0,1.633,1.075,"{
+  ""heap_pushes"": 5329,
+  ""heap_pops"": 5329,
+  ""edge_examinations"": 10632
+}","{
+  ""unions"": 461,
+  ""edge_considered"": 1264,
+  ""find_calls"": 5817
+}"
+graph_10,608,9338,1519.0,1519.0,2.936,1.817,"{
+  ""heap_pushes"": 9338,
+  ""heap_pops"": 9338,
+  ""edge_examinations"": 18643
+}","{
+  ""unions"": 607,
+  ""edge_considered"": 1912,
+  ""find_calls"": 8501
+}"

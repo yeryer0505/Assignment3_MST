@@ -45,41 +45,47 @@ public class PrimMST {
         List<Edge> mst = new ArrayList<>();
         double totalCost = 0.0;
         if (g.V() == 0) {
-            ops.put("edge_examinations", edgeExams);
-            ops.put("heap_pushes", heapPushes);
-            ops.put("heap_pops", heapPops);
+            ops.put("edge_examinations", 0L);
+            ops.put("heap_pushes", 0L);
+            ops.put("heap_pops", 0L);
             return new Result(mst, totalCost, ops, 0.0);
         }
 
         Set<String> visited = new HashSet<>();
         PriorityQueue<PQNode> pq = new PriorityQueue<>();
 
-        String start = g.getVertices().get(0);
-        visited.add(start);
-        for (Edge e : g.adj(start)) {
-            pq.add(new PQNode(start, e.other(start), e.getWeight()));
-            heapPushes++;
-        }
+        for (String start : g.getVertices()) {
+            if (visited.contains(start)) continue;
 
-        while (!pq.isEmpty() && visited.size() < g.V()) {
-            PQNode node = pq.poll();
-            heapPops++;
-            if (visited.contains(node.to)) continue;
-            visited.add(node.to);
-            mst.add(new Edge(node.from, node.to, node.weight));
-            totalCost += node.weight;
-            for (Edge e : g.adj(node.to)) {
-                edgeExams++;
-                String other = e.other(node.to);
-                if (!visited.contains(other)) {
-                    pq.add(new PQNode(node.to, other, e.getWeight()));
-                    heapPushes++;
+            visited.add(start);
+            for (Edge e : g.adj(start)) {
+                pq.add(new PQNode(start, e.other(start), e.getWeight()));
+                heapPushes++;
+            }
+
+            while (!pq.isEmpty()) {
+                PQNode node = pq.poll();
+                heapPops++;
+                if (visited.contains(node.to)) continue;
+
+                visited.add(node.to);
+                mst.add(new Edge(node.from, node.to, node.weight));
+                totalCost += node.weight;
+
+                for (Edge e : g.adj(node.to)) {
+                    edgeExams++;
+                    String other = e.other(node.to);
+                    if (!visited.contains(other)) {
+                        pq.add(new PQNode(node.to, other, e.getWeight()));
+                        heapPushes++;
+                    }
                 }
             }
         }
 
         long t1 = System.nanoTime();
         double timeMs = (t1 - t0) / 1_000_000.0;
+
         ops.put("edge_examinations", edgeExams);
         ops.put("heap_pushes", heapPushes);
         ops.put("heap_pops", heapPops);

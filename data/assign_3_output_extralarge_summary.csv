@@ -1,0 +1,28 @@
+name,V,E,prim_cost,kruskal_cost,prim_time_ms,kruskal_time_ms,prim_ops,kr_ops
+graph_1,1017,15412,2411.0,2411.0,16.305,9.206,"{
+  ""heap_pushes"": 15412,
+  ""heap_pops"": 15412,
+  ""edge_examinations"": 30806
+}","{
+  ""unions"": 1016,
+  ""edge_considered"": 3804,
+  ""find_calls"": 16799
+}"
+graph_2,1972,58362,3086.0,3086.0,29.223,12.145,"{
+  ""heap_pushes"": 58362,
+  ""heap_pops"": 58362,
+  ""edge_examinations"": 116661
+}","{
+  ""unions"": 1971,
+  ""edge_considered"": 6170,
+  ""find_calls"": 27625
+}"
+graph_3,1109,18503,2596.0,2596.0,6.894,14.247,"{
+  ""heap_pushes"": 18503,
+  ""heap_pops"": 18503,
+  ""edge_examinations"": 36977
+}","{
+  ""unions"": 1108,
+  ""edge_considered"": 4054,
+  ""find_calls"": 17940
+}"
