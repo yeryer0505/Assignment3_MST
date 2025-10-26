@@ -3,7 +3,7 @@ package mst;
 import java.util.*;
 
 public class Graph {
-    private final List<String> vertices;    // ordered list of vertex ids
+    private final List<String> vertices;
     private final List<Edge> edges;
     private final Map<String, List<Edge>> adj;
 
@@ -13,7 +13,6 @@ public class Graph {
         this.adj = new HashMap<>();
         for (String v : vertices) adj.put(v, new ArrayList<>());
         for (Edge e : edges) {
-            // ensure vertices exist
             if (!adj.containsKey(e.getU()) || !adj.containsKey(e.getV())) {
                 throw new IllegalArgumentException("Edge uses vertex not in vertices list: " + e);
             }
@@ -49,7 +48,6 @@ public class Graph {
     }
 
     public boolean hasCycle() {
-        // union-find cycle detection (undirected)
         UnionFind uf = new UnionFind(vertices);
         for (Edge e : edges) {
             String u = e.getU(), v = e.getV();
